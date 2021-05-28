@@ -10,14 +10,22 @@ public class RecordOld {
 	private String cognome;
 	private Date dataNascita;
 	private Date dataSinistro;
- 	private String tipoSinistro;
- 	private String luogoSinistro;
+
+	public int getNumeroSinistri() {
+		return numeroSinistri;
+	}
+
+	public void setNumeroSinistri(int numeroSinistri) {
+		this.numeroSinistri = numeroSinistri;
+	}
+
+	private int numeroSinistri;
 
 	private Integer fk_anagrafica;
 
 	public RecordOld() {}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
