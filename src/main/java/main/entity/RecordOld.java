@@ -73,23 +73,6 @@ public class RecordOld {
 		this.dataSinistro = dataSinistro;
 	}
 
-	public String getTipoSinistro() {
-		return tipoSinistro;
-	}
-
-	public void setTipoSinistro(String tipoSinistro) {
-		this.tipoSinistro = tipoSinistro;
-	}
-
-	public String getLuogoSinistro() {
-		return luogoSinistro;
-	}
-
-	public void setLuogoSinistro(String luogoSinistro) {
-		this.luogoSinistro = luogoSinistro;
-	}
-
-
 	public int getFk_anagrafica() {
 		return fk_anagrafica;
 	}

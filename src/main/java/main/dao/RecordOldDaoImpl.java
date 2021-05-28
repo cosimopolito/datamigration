@@ -18,7 +18,7 @@ public class RecordOldDaoImpl extends RecordOldDao {
 				" left join sinistri s on a.id = s.fk_anagrafica group by s.id";
 		List<RecordOld> recordOlds = new ArrayList<>();
 
-		try (Connection connection = getConnection();
+		try (Connection connection = getConnectionOld();
 				Statement statement =  connection.createStatement();
 			)
 		{

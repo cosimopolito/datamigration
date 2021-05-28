@@ -11,7 +11,7 @@ public class NewAssicuratoDaoImpl extends   NewAssicuratoDao {
     public void insert(RecordOld recordOld) {
         String query = "insert into assicurati ( nome,cognome,codice_fiscale,num_sinistri ) VALUES (?,?,?,?)";
 
-        try (Connection connection = getConnection();
+        try (Connection connection = getConnectionNew();
              PreparedStatement preparedStatement = connection.prepareStatement(query);
         ) {
             //PREPAREDSTATEMENT

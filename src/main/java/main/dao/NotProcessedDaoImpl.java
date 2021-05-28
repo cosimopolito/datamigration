@@ -10,7 +10,7 @@ public class NotProcessedDaoImpl extends  NotProcessedDao{
     public void insert(RecordOld recordOld) {
         String query = "insert into not_processed ( codice_fiscale,old_id ) VALUES (?,? )";
 
-        try (Connection connection = getConnection();
+        try (Connection connection = getConnectionNew();
              PreparedStatement preparedStatement = connection.prepareStatement(query);
         ) {
 
