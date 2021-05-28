@@ -1,9 +1,9 @@
 
 package main;
 
-import main.dao.UfficioDao;
-import main.dao.UfficioDaoImpl;
-import main.entity.Ufficio;
+import main.dao.RecordOldDao;
+import main.dao.RecordOldDaoImpl;
+import main.entity.RecordOld;
 
 import java.sql.*;
 import java.util.List;
@@ -66,13 +66,13 @@ public class Connessione {
 //	
 //	 
 //	
-		UfficioDao ufficioDao = new UfficioDaoImpl();
-		Ufficio ufficio =ufficioDao.get(1);
-		List<Ufficio> uffici= ufficioDao.getAll();
-		Ufficio ufficio2 = new Ufficio();
+		RecordOldDao recordOldDao = new RecordOldDaoImpl();
+		RecordOld recordOld = recordOldDao.get(1);
+		List<RecordOld> uffici= recordOldDao.getAll();
+		RecordOld recordOld2 = new RecordOld();
 		 
-		ufficio2.setNome("uffic2222");;
-		ufficioDao.delete(2);  
+		recordOld2.setNome("uffic2222");;
+		recordOldDao.delete(2);
 		
 
 	  
