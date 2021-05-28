@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 public class NotProcessedDaoImpl extends  NotProcessedDao{
     @Override
     public void insert(RecordOld recordOld) {
-        String query = "insert into not_processed ( codice_fiscale,old_id ) VALUES (?,? )";
+        String query = "insert into not_processed ( cod_fiscale,old_id ) VALUES (?,? )";
 
         try (Connection connection = getConnectionNew();
              PreparedStatement preparedStatement = connection.prepareStatement(query);

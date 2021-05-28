@@ -1,8 +1,7 @@
 
 package main;
 
-import main.dao.RecordOldDao;
-import main.dao.RecordOldDaoImpl;
+import main.dao.*;
 import main.entity.RecordOld;
 
 import java.sql.*;
@@ -15,7 +14,19 @@ public class Connessione {
 
 	}
 	public static void main(String[] args) {
+		RecordOldDao recordDao = new  RecordOldDaoImpl();
+		NotProcessedDao notProcessedDao = new NotProcessedDaoImpl();
+		NewAssicuratoDao newAssicuratoDao = new NewAssicuratoDaoImpl();
 
+		List<RecordOld> recordOlds = recordDao.getAll();
+		for (RecordOld item:recordOlds ) {
+			if (item.getCodiceFiscale().length() != 16){
+				notProcessedDao.insert(item);
+			}
+			else {
+				newAssicuratoDao.insert(item);
+			}
+		}
 	}
 	
 }

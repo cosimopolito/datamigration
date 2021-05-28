@@ -9,7 +9,7 @@ public class NewAssicuratoDaoImpl extends   NewAssicuratoDao {
 
     @Override
     public void insert(RecordOld recordOld) {
-        String query = "insert into assicurati ( nome,cognome,codice_fiscale,num_sinistri ) VALUES (?,?,?,?)";
+        String query = "insert into assicurato ( nome,cognome,cod_fiscale,numero_sinistri ) VALUES (?,?,?,?)";
 
         try (Connection connection = getConnectionNew();
              PreparedStatement preparedStatement = connection.prepareStatement(query);
