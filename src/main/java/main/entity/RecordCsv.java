@@ -2,7 +2,7 @@ package main.entity;
 
 import java.util.Date;
 
-public class RecordOld {
+public class RecordCsv {
 
 	private Integer id;
 	private String codiceFiscale;
@@ -23,7 +23,7 @@ public class RecordOld {
 
 	private Integer fk_anagrafica;
 
-	public RecordOld() {}
+	public RecordCsv() {}
 
 	public Integer getId() {
 		return id;

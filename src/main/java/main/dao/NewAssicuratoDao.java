@@ -1,12 +1,10 @@
 package main.dao;
 
-import main.entity.RecordOld;
-
-import java.util.List;
+import main.entity.RecordCsv;
 
 public abstract class NewAssicuratoDao extends Dao {
 
-     public abstract void insert(RecordOld recordOld) ;
+     public abstract void insert(RecordCsv recordCsv) ;
 
 
 }
